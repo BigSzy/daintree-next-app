@@ -29,6 +29,9 @@ function Header() {
                 <FontAwesomeIcon icon={faBasketShopping} />
               </Link>
             </div>
+            
+
+
           </div>
         </div>
       </div>

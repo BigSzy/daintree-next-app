@@ -2,7 +2,7 @@
     height: 100px;
     width: 100%;
     padding: 10px 0;
-
+    
     .headerRow{
         display: flex;
         flex-direction: row;
@@ -54,6 +54,35 @@
 
         a:hover{
             border-bottom: solid 1px #333;
+            color: #000;
+        }
+    }
+}
+
+@media only screen and (min-width:0px) and (max-width:750px) {
+    .header{
+
+        .headerRow{
+
+            .headerCol{
+                .logo{
+                    font-size: 1.15rem;
+                }
+
+            }
+        }
+
+        .headerRow2{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            border-bottom: none;
+            
+            a{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 20px;
+            }
         }
     }
 }
