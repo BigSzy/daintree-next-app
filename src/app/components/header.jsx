@@ -13,7 +13,9 @@ function Header() {
       <div className={styles.headerRow}>
         <div className={styles.headerCol}>
           <div className={styles.logo}>
-            <h2 className={playfairDisplay.className}>Daintree</h2>
+            <Link href={"/"} className={playfairDisplay.className}>
+              Daintree
+            </Link>
           </div>
         </div>
 
@@ -29,18 +31,15 @@ function Header() {
                 <FontAwesomeIcon icon={faBasketShopping} />
               </Link>
             </div>
-            
-
-
           </div>
         </div>
       </div>
 
       <div className={styles.headerRow2}>
-        <Link href={'/mens'}>Men's</Link>
-        <Link href={'/womens'}>Women's</Link>
-        <Link href={'/jewelery'}>Jewelery</Link>
-        <Link href={'/tech'}>Technology</Link>
+        <Link href={"/mens"}>Men's</Link>
+        <Link href={"/womens"}>Women's</Link>
+        <Link href={"/jewelery"}>Jewelery</Link>
+        <Link href={"/tech"}>Technology</Link>
       </div>
     </header>
   );

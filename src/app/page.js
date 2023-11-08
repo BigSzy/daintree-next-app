@@ -4,6 +4,7 @@ import Header from './components/header'
 import Hero from './components/hero'
 import HeroHeading from './components/heroHeading'
 import Heading from './components/heading'
+import Featured from './components/featured'
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Hero/>
       <HeroHeading/>
       <Heading title="Our Featured Products" />
+      <Featured/>
    </main>
   )
 }
