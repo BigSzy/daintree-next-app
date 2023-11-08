@@ -3,7 +3,7 @@ import styles from './styles/index.module.scss'
 import Header from './components/header'
 import Hero from './components/hero'
 import HeroHeading from './components/heroHeading'
-import Products from './components/products'
+import Heading from './components/heading'
 
 export default function Home() {
   return (
@@ -11,7 +11,7 @@ export default function Home() {
       <Header/>
       <Hero/>
       <HeroHeading/>
-      <Products/>
+      <Heading title="Our Featured Products" />
    </main>
   )
 }
