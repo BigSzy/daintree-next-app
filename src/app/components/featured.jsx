@@ -50,6 +50,7 @@ function Featured() {
           <p className={styles.category}>{product.category}</p>
           <p className={styles.price}>£{product.price}</p>
           <button
+
             className={styles.addToCart}
             onClick={() => {
               addItem(product);

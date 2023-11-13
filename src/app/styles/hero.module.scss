@@ -40,7 +40,11 @@
 }
 
 .heading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 40px 10px;
+  background-color: #fcfcfc;
 
 }
 

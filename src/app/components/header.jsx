@@ -23,12 +23,12 @@ function Header() {
           <div className={styles.shoppingLinks}>
             <div className={styles.icon}>
               <Link href={"/wishlist"}>
-                <FontAwesomeIcon icon={faHeart} />
+                <FontAwesomeIcon icon={faHeart} size="xl" fixedWidth/>
               </Link>
             </div>
             <div className={styles.icon}>
-              <Link href={"/shoppingBasket"}>
-                <FontAwesomeIcon icon={faBasketShopping} />
+              <Link href={"/cart"}>
+                <FontAwesomeIcon icon={faBasketShopping} size="xl" fixedWidth/>
               </Link>
             </div>
           </div>
