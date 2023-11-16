@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useState, useEffect }  from 'react'
-import styles from "../styles/Product.module.scss";
+import styles from "../styles/product.module.scss";
 import Link from 'next/link';
 import { useBasket } from "../components/shoppingBasket";
 
@@ -26,7 +26,7 @@ function AllProducts() {
       {products.map((product) => (
         <div className={styles.product} key={product.id}>
           <div className={styles.productImage}>
-            <Link href={`/product/${product.id}`}>
+            <Link href={`/products/${product.id}`}>
               <img src={product.image} alt="product image" />
             </Link>
           </div>

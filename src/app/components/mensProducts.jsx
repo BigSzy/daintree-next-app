@@ -29,7 +29,7 @@ function MensProducts() {
     {filteredProducts.map((product) => (
       <div className={styles.product} key={product.id}>
         <div className={styles.productImage}>
-          <Link href={`/product/${product.id}`}>
+          <Link href={`/products/${product.id}`}>
             <img src={product.image} alt="product image" />
           </Link>
         </div>

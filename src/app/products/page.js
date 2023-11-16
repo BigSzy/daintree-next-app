@@ -4,7 +4,7 @@ import Footer from "../components/footer";
 import Heading from "../components/heading";
 import AllProducts from "../components/allProducts";
 
-export default function Products() {
+export default function Products({id}) {
   return (
     <main className="container">
       <Header />
