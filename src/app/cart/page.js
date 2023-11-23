@@ -7,6 +7,7 @@ import Footer from "../components/footer";
 import CartProduct from "../components/cartProduct";
 import { useBasket } from "../components/shoppingBasket";
 import CartEmpty from "../components/cartEmpty";
+import OrderSummary from "../components/orderSummary";
 
 export default function Cart() {
   const { items, totalPrice } = useBasket();
@@ -27,6 +28,7 @@ export default function Cart() {
         <Header />
         <Heading title="Your Shopping Basket" />
         <CartProduct items={items}/>
+        <OrderSummary/>
         <Heading title="Items You May Like"/>
         <Featured />
         <Footer />
