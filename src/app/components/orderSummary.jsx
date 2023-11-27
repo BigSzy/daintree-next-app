@@ -2,6 +2,7 @@ import React from 'react'
 import styles from '../styles/orderSummery.module.scss'
 import { useBasket } from '../components/shoppingBasket'
 import Link from 'next/link'
+import CheckoutButton from './checkoutButton'
 
 function OrderSummary() {
 
@@ -15,14 +16,8 @@ function OrderSummary() {
         <div className={styles.totalPrice}>
           <p>TOTAL : &nbsp;  £{totalPrice()}</p>
         </div>
-        <div className={styles.promo}>
-          <h3>APPLY PROMO CODE</h3>
-          <input type="text" />
-          <button>APPLY</button>
-        </div>
-        <div className={styles.checkout}>
-          <Link href={'/'}>Checkout Securely</Link>
-        </div>
+       
+       <CheckoutButton/>
     </section>
   )
 }
