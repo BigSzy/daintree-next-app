@@ -32,18 +32,15 @@ const map = new Map([
 export async function POST(request) {
   const body = await request.json();
 
-
+  const lineItems = body.map(p => {return{
+    price:map.get(p.id),
+    quantity:p.qty
+  }})
 
   const YOUR_DOMAIN = "http://localhost:3000";
 
   const session = await stripe.checkout.sessions.create({
-    line_items: [
-      {
-        // Provide the exact Price ID (for example, pr_1234) of the product you want to sell
-        price: "price_1OH9oPFBmm2hwwc0wcCnyzjw",
-        quantity: 1,
-      },
-    ],
+    line_items: lineItems,
     mode: "payment",
     success_url: `${YOUR_DOMAIN}/success`,
     cancel_url: `${YOUR_DOMAIN}/cancel`,
