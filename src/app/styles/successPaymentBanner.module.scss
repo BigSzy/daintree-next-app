@@ -1,0 +1,26 @@
+.wrapper{
+    background: rgb(15, 15, 80);
+    color: #fff;
+    margin: auto;
+    width: 60%;
+    gap: 30px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+    border-radius: 10px;
+
+    .link{
+        a{
+            color: rgb(15, 15, 80);
+            background-color: #fff;
+            text-decoration: none;
+            padding: 5px 30px;
+            
+
+        }
+    }
+}
