@@ -17,8 +17,9 @@ function OrderSummary() {
           <p>TOTAL : &nbsp; £{totalPrice()}</p>
         </div>
       </div>
-
+    <div className={styles.checkout}> 
       <CheckoutButton />
+    </div>
     </section>
   );
 }
