@@ -2,6 +2,7 @@ import { loadStripe } from "@stripe/stripe-js";
 import { redirect } from "next/dist/server/api-utils";
 import { useBasket } from "./shoppingBasket";
 import React from "react";
+import styles from "../styles/checkoutbutton.module.scss"
 
 function CheckoutButton() {
 
@@ -40,7 +41,10 @@ function CheckoutButton() {
   };
 
   return (
-    <button onClick={() => redirectToCheckout()}>Checkout Securely</button>
+    <button 
+    className={styles.button}
+    onClick={() => redirectToCheckout()}>
+      CHECKOUT SERCURELY</button>
   );
 }
 

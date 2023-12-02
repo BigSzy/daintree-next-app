@@ -15,7 +15,7 @@ const map = new Map([
     [10, "price_1OH9ewFBmm2hwwc0lkE9oU1w"],
     [11, "price_1OH9fqFBmm2hwwc0fw7MsfFf"],
     [12, "price_1OH9gXFBmm2hwwc0MAqAyymX"],
-    [13, "price_1OH9hSFBmm2hwwc05CGfoQRd"],
+    [13, "price_1OIrgAFBmm2hwwc0Qpp7TiXG"],
     [14, "price_1OH9iUFBmm2hwwc0LjZ9ABjW"],
     [15, "price_1OH9kiFBmm2hwwc0uOKZpBY9"],
     [16, "price_1OH9lOFBmm2hwwc0u8rCnC7O"],

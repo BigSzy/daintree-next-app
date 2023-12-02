@@ -1,58 +1,7 @@
 .orderSummaryWrapper{
-    display: grid;
-    padding: 30px;
-    grid-template-areas:
-    "title title promo"
-    "total total promo";
-    background-color: rgb(15, 15, 80);
+    background: rgb(15, 15, 80);
     color: #fff;
-    gap: 15px;
-
-    .title{
-        grid-area: title;
-
-        h3{
-            border-bottom: solid 1px #ccc;
-            padding: 10px 0;
-        }
-    }
-
-    .totalPrice{
-        grid-area: total;
-    }
-
-    .promo{
-        grid-area: promo;
-        h3{
-            padding: 10px 0;
-        }
-        input{
-            margin-right: 20px;
-            margin-top: 12px;
-            padding: 3px;
-            
-        }
-
-        button{
-            border: none;
-            outline: none;
-            cursor: pointer;
-            padding: 5px 15px;
-            color: rgb(15, 15, 80);
-        }
-    }
-
-    .checkout{
-        background: #fff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 10px 30px;
-
-        a{
-            text-decoration: none;
-            color: rgb(15, 15, 80);
-            font-weight: 700;
-        }
-    }
+    display: grid;
+    grid-template-columns:repeat(2, 1fr);
+    padding: 30px;
 }
