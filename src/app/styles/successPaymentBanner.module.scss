@@ -10,8 +10,12 @@
     align-items: center;
     flex-direction: column;
     text-align: center;
-    padding: 30px;
+    padding: 20px;
     border-radius: 10px;
+
+    p{
+        margin: 10px 0;
+    }
 
     .link{
         a{
@@ -22,5 +26,14 @@
             
 
         }
+    }
+}
+
+@media screen and (min-width:0px) and (max-width:750px){
+    .wrapper{
+        width: 80%;
+        gap: 30px;
+
+       
     }
 }

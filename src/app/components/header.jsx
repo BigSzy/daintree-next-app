@@ -22,11 +22,6 @@ function Header() {
         <div className={styles.headerCol}>
           <div className={styles.shoppingLinks}>
             <div className={styles.icon}>
-              <Link href={"/wishlist"}>
-                <FontAwesomeIcon icon={faHeart} size="xl" fixedWidth/>
-              </Link>
-            </div>
-            <div className={styles.icon}>
               <Link href={"/cart"}>
                 <FontAwesomeIcon icon={faBasketShopping} size="xl" fixedWidth/>
               </Link>
