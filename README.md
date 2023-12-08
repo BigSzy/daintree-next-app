@@ -1,36 +1,23 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is my E-commerce website for my portfolio,
+This project was built with Next JS , Also i've included Fake Store API , Stripe API , Sass and font awesome icons, aswell as being deployed with AWS Amplifiy.
+To see this website in action please click on this link -> (insert working link here)
 
-## Getting Started
+If you use these files there are a few thing you are going to need to do to make the checkout system to work.
 
-First, run the development server:
+Firstly you will need to set up a stripe account to get two test keys for you to invoke the API and get your checkout session URL
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Secondly you will have to create a .env.local file in the root directory to then put these keys in two enviormental variables:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+    NEXT_PUBLIC_TEST_STRIPE_PUBLISHABLE_KEY = { your publishable key }
+    STRIPE_TEST_SECRET_KEY = { your secret key}
+    
+After the keys have been implemented you will now have to create all 20 products in your stripe product catalog.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+To get accurate results visit https://fakestoreapi.com/products to get all the IDs, name of products and prices , you can also npm run dev and look at all products by pressing the 'shop now' button on the home page to get the images.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Once all the products have been created you will need to extract the price IDs from stripe and insert them to the corresponding IDs in the map object in src/app/api/checkout/route.js file.
 
-## Learn More
+The functionality of the checkout system should work now but you will need to use test cards to make the checkout to go through , please find these here : https://stripe.com/docs/testing
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+    
