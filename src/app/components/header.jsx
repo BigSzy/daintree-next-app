@@ -31,10 +31,10 @@ function Header() {
       </div>
 
       <div className={styles.headerRow2}>
-        <Link href={"/mens"}>Men's</Link>
-        <Link href={"/womens"}>Women's</Link>
-        <Link href={"/jewelery"}>Jewelery</Link>
-        <Link href={"/tech"}>Technology</Link>
+        <Link href={"/categories/men's clothing"}>Men's</Link>
+        <Link href={"/categories/women's clothing"}>Women's</Link>
+        <Link href={"/categories/jewelery"}>Jewelery</Link>
+        <Link href={"/categories/electronics"}>Technology</Link>
       </div>
     </header>
   );

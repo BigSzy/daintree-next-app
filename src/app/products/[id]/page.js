@@ -5,8 +5,8 @@ import styles from "@/app/styles/productPage.module.scss";
 import AddToCartButton from "@/app/components/addToCartButton";
 
 export async function generateStaticParams() {
-  const responce = await fetch("https://fakestoreapi.com/products");
-  const products = await responce.json();
+  const response = await fetch("https://fakestoreapi.com/products");
+  const products = await response.json();
 
   return products.map((product) => ({
     id: product.id.toString(),

@@ -8,8 +8,11 @@ const ShoppingBasketContextProvider = ({ children }) => {
   const [items, setItems] = useState(readItemsFromStortage());
 
   function readItemsFromStortage() {
-    const item = localStorage.getItem("Basket");
-    return item ? JSON.parse(item) : [];
+    if (typeof localStorage !== "undefined") {
+      const item = localStorage.getItem("Basket");
+      return item ? JSON.parse(item) : [];
+    }
+    return [];
   }
 
   useEffect(() => {
