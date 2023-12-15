@@ -37,13 +37,13 @@ export async function POST(request) {
     quantity:p.qty
   }})
 
-  const YOUR_DOMAIN = "http://localhost:3000";
+  const domain = "http://localhost:3000";
 
   const session = await stripe.checkout.sessions.create({
     line_items: lineItems,
     mode: "payment",
-    success_url: `${YOUR_DOMAIN}/success`,
-    cancel_url: `${YOUR_DOMAIN}/cancel`,
+    success_url: `${domain}/success`,
+    cancel_url: `${domain}/cancel`,
   });
 
   console.log(session.url)
