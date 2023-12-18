@@ -18,8 +18,6 @@ function CheckoutButton() {
         qty: p.qty
       }})
 
-      console.log(data)
-
       const checkoutResponse = await fetch("/api/checkout/", {
         method: "POST",
         headers: {
@@ -28,12 +26,9 @@ function CheckoutButton() {
         body:JSON.stringify(data),
       });
 
-
-
       const url = await checkoutResponse.json();
       
       window.open(url)
-
 
     } catch (error) {
       console.error(error);

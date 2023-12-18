@@ -1,15 +1,12 @@
-"use client"
+"use client";
 
-import React, { useState, useEffect }  from 'react'
+import React, { useState, useEffect } from "react";
 import styles from "../styles/product.module.scss";
-import Link from 'next/link';
+import Link from "next/link";
 import { useBasket } from "../components/shoppingBasket";
 
-
 function AllProducts() {
-
   const { addItem } = useBasket();
-
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -34,6 +31,7 @@ function AllProducts() {
           <h3 className={styles.title}>{product.title}</h3>
           <p className={styles.category}>{product.category}</p>
           <p className={styles.price}>£{product.price}</p>
+
           <button
             className={styles.addToCart}
             onClick={() => {
@@ -45,7 +43,7 @@ function AllProducts() {
         </div>
       ))}
     </div>
-  )
+  );
 }
 
-export default AllProducts
+export default AllProducts;

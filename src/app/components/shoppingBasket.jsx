@@ -30,7 +30,6 @@ const ShoppingBasketContextProvider = ({ children }) => {
   }
 
   function addProduct(products, product) {
-    console.log(product);
 
     if (products.some((p) => p.id == product.id)) {
       return products.map((p) =>

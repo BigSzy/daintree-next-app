@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 
 const stripe = require("stripe")(process.env.STRIPE_TEST_SECRET_KEY);
-
+// Price IDs from Stripe product catalogue
 const map = new Map([
     [1, "price_1OH9RrFBmm2hwwc0ESLgWZWr"],
     [2, "price_1OH9ViFBmm2hwwc0WqOeTZFB"],
@@ -26,9 +26,6 @@ const map = new Map([
 
 ])
 
-
-
-
 export async function POST(request) {
   const body = await request.json();
 
@@ -45,8 +42,6 @@ export async function POST(request) {
     success_url: `${domain}/success`,
     cancel_url: `${domain}/cancel`,
   });
-
-  console.log(session.url)
 
   return new NextResponse(JSON.stringify(session.url));
 }

@@ -23,7 +23,7 @@ function Header() {
           <div className={styles.shoppingLinks}>
             <div className={styles.icon}>
               <Link href={"/cart"}>
-                <FontAwesomeIcon icon={faBasketShopping} size="xl" fixedWidth/>
+                <FontAwesomeIcon icon={faBasketShopping} size="xl" fixedWidth />
               </Link>
             </div>
           </div>
