@@ -1,23 +1,28 @@
-This is my E-commerce website for my portfolio,
-This project was built with Next JS , Also i've included Fake Store API , Stripe API , Sass and font awesome icons, aswell as being deployed with AWS Amplifiy.
-To see this website in action please click on this link -> (insert working link here)
+# E-Commerce Portfolio Project
 
-If you use these files there are a few thing you are going to need to do to make the checkout system to work.
+Sample Next.js e-commerce website integrating Fake Store API, Stripe API, Sass, and Font Awesome icons. Deployed with AWS Amplify. View the live demo [here](insert working link). For checkout use fake credit card No *4242 4242 4242 4242*. (pick expiry date in the future and use any CCV code). The project use Static Site Generation to create product and category pages.
 
-Firstly you will need to set up a stripe account to get two test keys for you to invoke the API and get your checkout session URL
+## Technologies Used
 
-Secondly you will have to create a .env.local file in the root directory to then put these keys in two enviormental variables:
+- **Next.js:** React framework with SSR.
+- **Fake Store API:** Sample product data.
+- **Stripe API:** Secure and efficient payment processing.
+- **Sass:** Flexible and organized styling.
+- **Font Awesome Icons:** Sleek and modern design elements.
 
-    NEXT_PUBLIC_TEST_STRIPE_PUBLISHABLE_KEY = { your publishable key }
-    STRIPE_TEST_SECRET_KEY = { your secret key}
-    
-After the keys have been implemented you will now have to create all 20 products in your stripe product catalog.
+## Setup
 
-To get accurate results visit https://fakestoreapi.com/products to get all the IDs, name of products and prices , you can also npm run dev and look at all products by pressing the 'shop now' button on the home page to get the images.
+1. **Stripe Account:**
+   Create a Stripe account and obtain test keys for API integration.
 
-Once all the products have been created you will need to extract the price IDs from stripe and insert them to the corresponding IDs in the map object in src/app/api/checkout/route.js file.
+2. **Environment Variables:**
+   In the root directory, create a `.env.local` file with your Stripe test keys.
+```plaintext
+STRIPE_PUBLIC_KEY=your_public_key
+STRIPE_SECRET_KEY=your_secret_key
+```
 
-The functionality of the checkout system should work now but you will need to use test cards to make the checkout to go through , please find these here : https://stripe.com/docs/testing
-
-
-    
+3. **Running the project** 
+```
+npm install && npm run dev
+```
