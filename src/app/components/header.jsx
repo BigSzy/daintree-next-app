@@ -3,7 +3,8 @@ import Link from "next/link";
 import styles from "../styles/header.module.scss";
 import { Playfair_Display } from "next/font/google";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBasketShopping, faHeart } from "@fortawesome/free-solid-svg-icons";
+import { faBasketShopping } from "@fortawesome/free-solid-svg-icons";
+import BasketIcon from "./basketIcon";
 
 const playfairDisplay = Playfair_Display({ subsets: ["latin"] });
 
@@ -21,11 +22,7 @@ function Header() {
 
         <div className={styles.headerCol}>
           <div className={styles.shoppingLinks}>
-            <div className={styles.icon}>
-              <Link href={"/cart"}>
-                <FontAwesomeIcon icon={faBasketShopping} size="xl" fixedWidth />
-              </Link>
-            </div>
+            <BasketIcon />
           </div>
         </div>
       </div>

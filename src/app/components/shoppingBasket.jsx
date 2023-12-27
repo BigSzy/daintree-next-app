@@ -23,42 +23,47 @@ const ShoppingBasketContextProvider = ({ children }) => {
     setItems((prev) => addProduct(prev, product));
   };
 
-  function totalPrice() {
-    return items
-      .reduce((total, item) => total + item.price * item.qty, 0)
-      .toFixed(2);
-  }
-
+  
   function addProduct(products, product) {
-
     if (products.some((p) => p.id == product.id)) {
       return products.map((p) =>
-        p.id == product.id ? { ...product, qty: p.qty + 1 } : p
+      p.id == product.id ? { ...product, qty: p.qty + 1 } : p
       );
     } else {
       return [...products, { ...product, qty: 1 }];
     }
   }
-
-  const removeItems = (product) => {
+  
+  const removeProduct = (product) => {
     setItems((prev) => prev.filter((p) => p.id != product.id));
   };
-
+  
   const removeItem = (product) => {
     if (product.qty === 1) {
       return setItems((prev) => prev.filter((p) => p.id != product.id));
     } else {
       setItems((prev) =>
-        prev.map((p) =>
-          p.id == product.id ? { ...product, qty: p.qty - 1 } : p
-        )
+      prev.map((p) =>
+      p.id == product.id ? { ...product, qty: p.qty - 1 } : p
+      )
       );
     }
   };
 
+  function clearBasket (  ) {
+    if (items.length > 0 ) {
+      setItems([]);
+    } 
+  }
+  
+  function totalPrice() {
+    return items
+      .reduce((total, item) => total + item.price * item.qty, 0)
+      .toFixed(2);
+  }
   return (
     <ShoppingBasketContext.Provider
-      value={{ items, addItem, removeItems, removeItem, totalPrice }}
+      value={{ items, addItem, removeProduct, removeItem, totalPrice, clearBasket }}
     >
       {children}
     </ShoppingBasketContext.Provider>

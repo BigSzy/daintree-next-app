@@ -1,6 +1,10 @@
+"use client"
+
 import React from 'react'
 import styles from "../styles/successPaymentBanner.module.scss"
 import Link from 'next/link'
+import { useBasket } from './shoppingBasket'
+
 
 function SuccessPaymentBanner() {
   return (

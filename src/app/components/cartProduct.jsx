@@ -3,7 +3,7 @@ import styles from "../styles/product.module.scss";
 import { useBasket } from "./shoppingBasket";
 
 function CartProduct({ items }) {
-  const { removeItems, removeItem, addItem } = useBasket();
+  const { removeProduct, removeItem, addItem } = useBasket();
 
   return (
     <div className={styles.productGrid}>
@@ -28,7 +28,7 @@ function CartProduct({ items }) {
           </div>
           <button
             className={styles.removeAll}
-            onClick={() => removeItems(item)}
+            onClick={() => removeProduct(item)}
           >
             Remove Items From Cart
           </button>
