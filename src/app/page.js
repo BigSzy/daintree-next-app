@@ -7,12 +7,6 @@ import Featured from './components/featured'
 import Footer from './components/footer'
 
 export default function Home() {
-
-  const { clearBasket } = useBasket()
-
-  clearBasket()
-
-  
   return (
    <main className='container'>
       <Header/>
