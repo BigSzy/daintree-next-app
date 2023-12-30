@@ -1,5 +1,3 @@
-import Image from 'next/image'
-import styles from './styles/index.module.scss'
 import Header from './components/header'
 import Hero from './components/hero'
 import Heading from './components/heading'
@@ -11,7 +9,6 @@ export default function Home() {
    <main className='container'>
       <Header/>
       <Hero/>
-
       <Heading title="Our Featured Products" />
       <Featured/>
       <Footer/>

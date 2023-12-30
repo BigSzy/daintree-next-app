@@ -14,7 +14,6 @@ function CartProduct({ items }) {
           </div>
 
           <h3 className={styles.title}>{item.title}</h3>
-          <p className={styles.category}>{item.category}</p>
           <p className={styles.price}>£{item.price}</p>
           <p className={styles.price}>{item.qty}</p>
 

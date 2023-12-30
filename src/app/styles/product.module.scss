@@ -17,6 +17,13 @@
     text-decoration: none;
     padding: 10px;
     gap: 10px;
+    
+
+    .title{
+      height: 25px;
+      margin-bottom: 30px;
+      font-size: 1rem;
+    }
 
     .addToCart {
       outline: none;
@@ -42,23 +49,33 @@
     gap: 30px;
 
     .add {
-      padding: 9px 11px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
       background-color: rgb(15, 15, 80);
       color: #fff;
       border: none;
       outline: none;
       border-radius: 3px;
       font-size: 1rem;
+      width: 30px;
+      height: 30px;
     }
 
     .remove {
-      padding: 9px 11px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
       background-color: rgb(15, 15, 80);
       color: #fff;
       border: none;
       outline: none;
       border-radius: 3px;
       font-size: 1rem;
+      width: 30px;
+      height: 30px;
     }
   }
   .removeAll {

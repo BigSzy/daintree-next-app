@@ -1,23 +1,21 @@
-"use client"
+"use client";
 
-import React from 'react'
-import Header from '../components/header'
-import SuccessPaymentBanner from '../components/successPaymentBanner'
-import { useBasket } from '../components/shoppingBasket'
+import React from "react";
+import Header from "../components/header";
+import SuccessPaymentBanner from "../components/successPaymentBanner";
+import { useBasket } from "../components/shoppingBasket";
 
 function Success() {
+  const { clearBasket } = useBasket();
 
-  const { clearBasket } = useBasket()
+  clearBasket();
 
-  clearBasket()
-
-  
   return (
-    <main className='container'> 
-        <Header/>
-        <SuccessPaymentBanner/>
+    <main className="container">
+      <Header />
+      <SuccessPaymentBanner />
     </main>
-  )
+  );
 }
 
-export default Success
+export default Success;

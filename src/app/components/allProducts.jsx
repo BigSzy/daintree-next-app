@@ -28,8 +28,10 @@ function AllProducts() {
             </Link>
           </div>
 
-          <h3 className={styles.title}>{product.title}</h3>
-          <p className={styles.category}>{product.category}</p>
+          <div className={styles.title}>
+            <h4>{product.title}</h4>
+          </div>
+          
           <p className={styles.price}>£{product.price}</p>
 
           <button

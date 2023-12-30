@@ -18,7 +18,6 @@ function Products({ products }) {
           </div>
 
           <h3 className={styles.title}>{product.title}</h3>
-          <p className={styles.category}>{product.category}</p>
           <p className={styles.price}>£{product.price}</p>
           <button
             className={styles.addToCart}

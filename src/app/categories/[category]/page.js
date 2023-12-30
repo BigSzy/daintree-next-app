@@ -1,5 +1,6 @@
 import Footer from "@/app/components/footer";
 import Header from "@/app/components/header";
+import Heading from "@/app/components/heading";
 import Products from "@/app/components/products";
 import React from "react";
 
@@ -21,9 +22,16 @@ async function getProducts(category) {
 export default async function CategoryPage({ params }) {
   const products = await getProducts(params.category);
 
+  const decoded = decodeURI(params.category)
+
+  const heading = decoded[0].toUpperCase() + decoded.slice(1)
+
+  
+
   return (
     <main className="container">
       <Header />
+      <Heading title={`${heading}`}/>
       <Products products={products} />
       <Footer />
     </main>
