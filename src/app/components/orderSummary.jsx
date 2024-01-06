@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "../styles/orderSummery.module.scss";
 import { useBasket } from "../components/shoppingBasket";
-import Link from "next/link";
 import CheckoutButton from "./checkoutButton";
 
 function OrderSummary() {

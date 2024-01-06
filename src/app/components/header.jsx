@@ -2,8 +2,6 @@ import React from "react";
 import Link from "next/link";
 import styles from "../styles/header.module.scss";
 import { Playfair_Display } from "next/font/google";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBasketShopping } from "@fortawesome/free-solid-svg-icons";
 import BasketIcon from "./basketIcon";
 
 const playfairDisplay = Playfair_Display({ subsets: ["latin"] });

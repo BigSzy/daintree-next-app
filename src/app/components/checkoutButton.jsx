@@ -1,6 +1,9 @@
-import { useBasket } from "./shoppingBasket";
 import React from "react";
 import styles from "../styles/checkoutbutton.module.scss";
+import { useBasket } from "./shoppingBasket";
+import { Montserrat } from "next/font/google";
+
+const montserrat = Montserrat({ subsets: ["latin"] });
 
 function CheckoutButton() {
   const { items } = useBasket();
@@ -31,7 +34,7 @@ function CheckoutButton() {
   };
 
   return (
-    <button className={styles.button} onClick={() => redirectToCheckout()}>
+    <button className={`${styles.button} ${montserrat.className}`} onClick={() => redirectToCheckout()}>
       CHECKOUT SERCURELY
     </button>
   );
