@@ -34,7 +34,7 @@ export async function POST(request) {
     quantity:p.qty
   }})
 
-  const domain = "http://localhost:3000";
+  const domain = "shop.skwd.co.uk";
 
   const session = await stripe.checkout.sessions.create({
     line_items: lineItems,
