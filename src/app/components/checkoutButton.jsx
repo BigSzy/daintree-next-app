@@ -25,7 +25,7 @@ function CheckoutButton() {
         body: JSON.stringify(data),
       });
 
-      const url = await checkoutResponse.JSON();
+      const url = await checkoutResponse.json();
 
       window.open(url);
     } catch (error) {
