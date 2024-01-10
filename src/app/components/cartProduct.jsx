@@ -1,6 +1,9 @@
 import React from "react";
 import styles from "../styles/product.module.scss";
 import { useBasket } from "./shoppingBasket";
+import { Montserrat } from "next/font/google";
+
+const montserrat = Montserrat({ subsets: ["latin"] });
 
 function CartProduct({ items }) {
   const { removeProduct, removeItem, addItem } = useBasket();
@@ -26,10 +29,10 @@ function CartProduct({ items }) {
             </button>
           </div>
           <button
-            className={styles.removeAll}
+            className={`${styles.removeAll} ${montserrat.className}`}
             onClick={() => removeProduct(item)}
           >
-            Remove Items From Cart
+            Remove From Cart
           </button>
         </div>
       ))}

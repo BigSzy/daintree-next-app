@@ -4,6 +4,9 @@ import React, { useState, useEffect } from "react";
 import styles from "../styles/product.module.scss";
 import Link from "next/link";
 import { useBasket } from "../components/shoppingBasket";
+import { Montserrat } from "next/font/google";
+
+const montserrat = Montserrat({ subsets: ["latin"] });
 
 function Featured() {
   const { addItem } = useBasket();
@@ -38,7 +41,7 @@ function Featured() {
           <h3 className={styles.title}>{product.title}</h3>
           <p className={styles.price}>£{product.price}</p>
           <button
-            className={styles.addToCart}
+            className={`${styles.addToCart} ${montserrat.className}`}
             onClick={() => {
               addItem(product);
             }}

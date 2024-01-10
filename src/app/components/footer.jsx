@@ -10,6 +10,9 @@ import {
   faXTwitter,
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
+import { Montserrat } from "next/font/google";
+
+const montserrat = Montserrat({ subsets: ["latin"] });
 
 function Footer() {
   return (
@@ -17,27 +20,27 @@ function Footer() {
       <div className={styles.social}>
         <div className={styles.icon}>
           <Link href={"/"}>
-            <FontAwesomeIcon icon={faFacebook} />
+            <FontAwesomeIcon icon={faFacebook} size="2x" />
           </Link>
         </div>
         <div className={styles.icon}>
           <Link href={"/"}>
-            <FontAwesomeIcon icon={faXTwitter} />
+            <FontAwesomeIcon icon={faXTwitter} size="2x" />
           </Link>
         </div>
         <div className={`${styles.icon} ${styles.youtube}`}>
           <Link href={"/"}>
-            <FontAwesomeIcon icon={faYoutube} />
+            <FontAwesomeIcon icon={faYoutube} size="2x" />
           </Link>
         </div>
         <div className={styles.icon}>
           <Link href={"/"}>
-            <FontAwesomeIcon icon={faPinterest} />
+            <FontAwesomeIcon icon={faPinterest} size="2x" />
           </Link>
         </div>
         <div className={styles.icon}>
           <Link href={"/"}>
-            <FontAwesomeIcon icon={faInstagram} />
+            <FontAwesomeIcon icon={faInstagram} size="2x" />
           </Link>
         </div>
       </div>
